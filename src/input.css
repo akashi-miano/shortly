@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* utilities */
+@layer utilities {
+	.container {
+		@apply mx-auto py-8 px-4;
+	}
+	.flow-content--xs > * + * {
+		margin-top: .5rem;
+	}
+	.flow-content--sm > * + * {
+		margin-top: 1rem;
+	}
+	.flow-content--md > * + * {
+		margin-top: 1.5rem;
+	}
+	.flow-content--xm > * + * {
+		margin-top: 2rem;
+	}
+	.flow-content--lg > * + * {
+		margin-top: 2.5rem;
+	}
+	.flow-content--xl > * + * {
+		margin-top: 3rem;
+	}
+}
+/* components */
+@layer components {
+	.btn {
+		@apply inline-block font-bold text-xl cursor-pointer;
+	}
+	.btn-primary {
+		@apply text-white  bg-teal-400 hover:bg-teal-300 duration-300;
+	}
+	.btn-secondary{
+		@apply text-white  bg-purple-900 hover:bg-purple-700 duration-300;
+	}
+}
+
+
+/* global styles */
+body {
+	font-family: Poppins, sans-serif;
+	line-height: 1.6;
+}
+
+h1,h2,h3,h4 {
+	line-height: 1.1;
+}
+
+/* hero section */
+
+.hero__list a,
+.hero__login {
+	@apply text-white md:text-gray-400 font-bold hover:text-black duration-300;
+}
+
+/* links section */
+.link {
+	@apply text-[cyan]
+}
+
+/* mobile nav */
+
+.mobile-nav {
+padding: 3px;
+}
+
+.open.hero-nav__wrapper {
+	display: block;
+}
+
+.ham {
+	height: 3px;
+	width: 25px;
+	border-radius: 999px;
+	position: relative;
+	background: #999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 350ms;
+}
+
+.open .ham {
+	background: 0;
+}
+
+.ham::before,
+.ham::after {
+	content: '';
+	position: absolute;
+	height: 3px;
+	width: 25px;
+	border-radius: 999px;
+	background: #999;
+	transition: 350ms;
+}
+
+.ham::before {
+	transform:  translateY(-6px);
+}
+.ham::after{
+	transform:  translateY(6px);
+}
+.open .ham::before {
+	content: '';
+	transform:  rotate(45deg);
+	
+}
+.open .ham::after{
+	content: '';
+	transform:  rotate(-45deg);
+}
+
+/* boost section */
+.boost {
+	background: url('http://localhost/projects/tailwind-course-projects/website-projects/shortly/images/bg-boost-desktop.svg') no-repeat center/cover;
+}
+
+/* footer */
+.footer h3, i{
+		color: #fff;
+}
+.footer__list a {
+	@apply text-gray-400 hover:text-emerald-300 duration-300;
+}
+.footer__social-list i {
+	@apply text-3xl hover:text-zinc-700 duration-200;
+}
+
+/* mobile media */ 
+
+@media(max-width: 35em) {
+	html {
+		font-size: 62.5%;
+	}
+}

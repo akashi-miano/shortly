@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Shortly</title>
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"> 
+		<!-- link fontawesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- link external css -->
+		<link rel="stylesheet" href="css/style.css" media="all">
+		<!-- link external JavaScript -->
+		<script defer src="js/script.js"></script>
+	</head>
+	<body>
+		<!-- hero section -->
+		<header class="hero">
+			<!-- mobile nav -->
+			<nav class="hero__nav p-8 md:p-0">
+				<div class="mobile-nav-wrapper flex justify-between items-center md:hidden mb-4 md:mb-0">
+					<img class="hero__logo md:hidden" src="../images/logo.svg" alt="">
+					<button class="mobile-nav md:hidden">
+						<div class="ham"></div>
+					</button>
+				</div>
+				<div class="hero-nav__wrapper flex flex-col md:flex-row text-center items-center justify-between container hidden md:flex bg-purple-900 md:bg-transparent p-8 md-p-0 rounded-xl">
+					<ul class="hero__list flex flex-col md:flex-row items-center gap-4 mb-8 md:mb-0 md:gap-8">
+						<img class="hidden md:block hero__logo" src="../images/logo.svg" alt="">
+						<li class="hero__item"><a href="">Features</a></li>
+						<li class="hero__item"><a href="">Pricing</a></li>
+						<li class="hero__item"><a href="">Resources</a></li>
+					</ul>
+					<ul class="hero__register md:flex items-center gap-8 md:block w-full md:w-fit border-t-2 pt-4 md:pt-0 border-gray-200 md:border-0">
+						<li class="hero__register-item mb-4 md:mb-0"><a class="hero__login" href="">Login</a></li>
+						<li class="hero__register-item "><a class="btn btn-primary rounded-full px-4 py-2 w-full md:w-fit" href="">Sign Up</a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<!-- hero content -->
+			<div class="hero__content-wrapper container">
+				<div class="hero__content grid text-center md:text-left grid-cols-1 md:grid-cols-2 items-center gap-4 gap-y-12  md:gap-y-0">
+					<div class="hero__desc flow-content--md">
+						<h1 class="hero__title text-6xl font-bold"> More than just shorter links </h1>
+						<p class="hero__desc text-gray-400 text-2xl leading-8 mx-auto md:mx-0 max-w-[450px]"> Build your brand's recognition and get detailed insights on how your links are performing. </p>
+						<a class="btn btn-primary text-2xl rounded-full px-8  py-4 text-2xl" href="">Get Started</a>
+					</div>
+					<div class="hero__img-wrapper block max-auto">
+						<img class="hero__img w-full" src="../images/illustration-working.svg" alt="">
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- short link section -->
+		<section class="short pt-32">
+			<div class="short__wrapper bg-[#eee] relative">
+				<div class="short-content-wrapper container mx-auto px-4">
+					<div class="short__content max-w-[850px] mx-auto flow-content--md">
+						<form class="form absolute top-[-3rem] left-0 right-0 max-w-[850px] md:max-w-[850px] mx-auto px-8" action="">
+							<div class="form__content container mx-auto flex flex-col md:flex-row items-center gap-4 justify-center bg-purple-900 p-8 mx-auto rounded-xl ">
+								<input class="rounded-xl p-2 w-full flex-1 placeholder:text-yellow-500" id="" type="text" name="" placeholder="Shorten a link here">
+								<button class="btn btn-primary w-full md:w-fit text-md rounded-xl px-4 py-2" type="submit">Shorten it!</button>
+							</div>
+						</form>
+						<div class="links flex flex-col gap-4 translate-y-[20%] md:translate-y-[15%]">
+							<ul class="links-list">
+								<li class="link-item bg-white rounded-xl p-4 flex items-center justify-between grid grid-cols-1 justify-items-center md:grid-cols-2">
+									<a class="text-zinc-900 text-lg font-bold text-center" href=""> https://frontendmentor.io </a>
+									<div class="link__item-inner-wrapper grid grid-cols-1 justify-items-center md:block md:space-x-4">
+										<a class="link text-lg font-bold mb-2 md:mb-0" href="">https://rel.ink/k4ikyk</a>
+										<a class="btn btn-primary rounded-xl px-8 py-2 text-lg w-fit" href="">copy</a>
+									</div>
+								</li>
+							</ul>
+							<ul class="links-list">
+								<li class="link-item bg-white rounded-xl p-4 flex items-center justify-between grid grid-cols-1 justify-items-center md:grid-cols-2">
+									<a class="text-zinc-900 text-lg font-bold text-center" href=""> https://twitter.com/frontendmentor </a>
+									<div class="link__item-inner-wrapper grid grid-cols-1 justify-items-center md:block md:space-x-4">
+										<a class="link text-lg font-bold mb-2 md:mb-0" href="">https://rel.ink/gxOXp9</a>
+										<a class="btn btn-secondary rounded-xl px-8 py-2 text-lg w-fit" href="">copy</a>
+									</div>
+								</li>
+							</ul>
+							<ul class="links-list">
+								<li class="link-item bg-white rounded-xl p-4 flex items-center justify-between grid grid-cols-1 justify-items-center md:grid-cols-2">
+									<a class="text-zinc-900 text-lg font-bold text-center" href=""> https://linkedin.com/frontend-mentor </a>
+									<div class="link__item-inner-wrapper grid grid-cols-1 justify-items-center md:block md:space-x-4">
+										<a class="link text-lg font-bold mb-2 md:mb-0" href="">https://rel.ink/gob3X9</a>
+										<a class="btn btn-primary rounded-xl px-8 py-2 text-lg w-fit" href="">copy</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- stats section -->
+		<section class="stats py-24 bg-[#eee] flow-content--lg">
+			<header class="stats__header flow-content--md container mx-auto px-8">
+				<h2 class="stats__title text-3xl text-zinc-900 flex justify-center font-bold text-center">Advanced Statistics</h2>
+				<p class="stats__desc text-gray-500 max-w-[550px] mx-auto text-center text-md"> Track how your links are performing across the web with our advanced statistics dashboard. </p>
+			</header>
+			<div class="stats__card-wrapper container ">
+				<div class="stats__card-wrapper container grid grid-cols-1 justify-items-center md:grid-cols-3 md:gap-8 gap-24 md:space-y-0">
+					<div class="stats__card bg-white rounded-xl md:max-w-[450px] p-4 md:translate-y-[10%] relative text-center">
+						<div class="stats__card-logo-wrapper w-[80px] h-[80px] bg-zinc-800 rounded-full flex justify-center items-center transform translate-y-[-65%] md:translate-x-[0%] absolute left-[50%] md:left-[0%] transform translate-x-[-50%] stats__card-img md:relative">
+							<img class=" stats__card-img w-[40px] h-[40px]" src="../images/icon-brand-recognition.svg" alt="">
+						</div>
+						<h3 class="stats__card-title text-2xl text-zinc-900 font-bold mb-4 mt-12 md:mt-0"> Brand Recognition </h3>
+						<p class="stats__card-desc text-gray-400"> Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content. </p>
+						<div class="bg-cyan-500 md:w-8 md:h-4 w-2 h-[5rem] absolute bottom-[-5rem] md:bottom-0 right-[50%]  md:translate-y-[25%] md:right-0 md:top-[50%] md:transform md:translate-y-[-50%] md:translate-x-[100%] "></div>
+					</div>
+					<div class="stats__card bg-white text-center md:text-left rounded-xl md:max-w-[450px] p-4 md:transform md:translate-y-[4rem] relative">
+						<div class="stats__card-logo-wrapper w-[80px] h-[80px] bg-zinc-800 rounded-full flex justify-center items-center transform translate-y-[-70%]  md:translate-x-[0%] absolute left-[50%] md:left-[0%] transform translate-x-[-50%] md:translate-x-[0%] stats__card-img md:relative">
+							<img class="stats__card-img w-[40px] h-[40px]  stats__card-img w-[40px] h-[40px]" src="../images/icon-detailed-records.svg" alt="">
+						</div>
+						<h3 class="stats__card-title text-2xl text-zinc-900 font-bold mb-4 mt-12 md:mt-0"> Detailed records </h3>
+						<p class="stats__card-desc text-gray-400"> Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions. </p>
+						<div class="bg-cyan-500 md:w-8 md:h-4 w-2 h-[5rem] absolute bottom-[-5rem] md:bottom-0 right-[50%]  md:translate-y-[25%] md:right-0 md:top-[50%] md:transform md:translate-y-[-50%] md:translate-x-[100%] "></div>
+					</div>
+					<div class="stats__card bg-white rounded-xl md:max-w-[450px] p-4 md:transform md:translate-y-[7rem] relative text-center">
+						<div class="stats__card-logo-wrapper w-[80px] h-[80px] bg-zinc-800 rounded-full flex justify-center items-center transform translate-y-[-75%]  md:translate-x-[0%] absolute left-[50%] md:left-[0%] transform translate-x-[-50%] stats__card-img absolute md:relative">
+							<img class="stats__card-img w-[40px] h-[40px] " src="../images/icon-fully-customizable.svg" alt="">
+						</div>
+						<h3 class="stats__card-title text-2xl text-zinc-900 font-bold mb-4 mt-12 md:mt-0"> Fully customizable </h3>
+						<p class="stats__card-desc text-gray-400"> Improve brand awareness and content discoverability through customizable links, supercharging audience engagement. </p>
+					</div>
+				</div>
+		</section>
+
+		<!-- boost section -->
+		<section class="boost py-24">
+			<div class="boost-wrapper container"></div>
+			<div class="boost__content flow-content--md flex flex-col justify-center">
+				<h2 class="text-4xl text-center font-bold"> Boost your links today </h2>
+				<a class="btn btn-primary rounded-full px-14 py-4 w-fit mx-auto" href="#">Get started</a>
+			</div>
+		</section>
+
+		<!-- footer -->
+		<footer class="footer py-14 bg-zinc-800">
+			<div class="footer__wrapper container">
+				<div class="footer__content grid grid-cols-1 gap-8 justify-items-center md:grid-cols-5 text-center">
+					<div class="footer__logo text-4xl text-zinc-700 font-bold">Shortly</div>
+					<ul class="footer__list flow-content--sm">
+						<h3 class="footer__list-title text-xl font-bold">Features</h3>
+						<li class="footer__item"><a href="">Link shortening</a></li>
+						<li class="footer__item"><a href="">Branded links</a></li>
+						<li class="footer__item"><a href="">Branded links</a></li>
+					</ul>
+					<ul class="footer__list flow-content--sm">
+						<h3 class="footer__list-title text-xl font-bold">Resource</h3>
+						<li class="footer__item"><a href="">Blog</a></li>
+						<li class="footer__item"><a href="">Developers</a></li>
+						<li class="footer__item"><a href="">Support</a></li> </ul>
+					<ul class="footer__list flow-content--sm">
+						<h3 class="footer__list-title text-xl font-bold">Company</h3>
+						<li class="footer__item"><a href="">About</a></li>
+						<li class="footer__item"><a href="">Our Team</a></li>
+						<li class="footer__item"><a href="">Careers</a></li>
+						<li class="footer__item"><a href="">Contact</a></li>
+					</ul>
+					<ul class="footer__social-list flex gap-4 ">
+						<li class="footer__item">
+							<a href=""><i class="fa-brands fa-facebook"></i></a>
+						</li>
+						<li class="footer__item">
+							<a href=""><i class="fa-brands fa-twitter"></i></a>
+						</li>
+						<li class="footer__item">
+							<a href=""><i class="fa-brands fa-patreon"></i></a>
+						</li>
+						<li class="footer__item">
+							<a href=""><i class="fa-brands fa-instagram"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
