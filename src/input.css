@@ -54,7 +54,7 @@ h1,h2,h3,h4 {
 
 .hero__list a,
 .hero__login {
-	@apply text-white md:text-gray-400 font-bold hover:text-black duration-300;
+	@apply text-white lg:text-gray-400 font-bold hover:text-black duration-300;
 }
 
 /* links section */
@@ -117,7 +117,11 @@ padding: 3px;
 
 /* boost section */
 .boost {
-	background: url('http://localhost/projects/tailwind-course-projects/website-projects/shortly/images/bg-boost-desktop.svg') no-repeat center/cover;
+	background-image: url('../../images/bg-boost-desktop.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-color: hsl(257 27% 26%) ;
 }
 
 /* footer */
