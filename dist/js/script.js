@@ -14,45 +14,41 @@ ham.addEventListener("click", () => {
 });
 
 const options = {
-  method: 'POST',
+  method: "POST",
   headers: {
     Authorization: `Bearer ${token}`,
-    'Content-Type': 'application/json'
+    "Content-Type": "application/json",
   },
-  body: JSON.stringify({ "long_url": `` })
-}
+  body: JSON.stringify({ long_url: `` }),
+};
 
 const saveData = () => {
   localStorage.setItem("data", linksContainer.innerHTML);
-}
+};
 
 const showData = () => {
   linksContainer.innerHTML = localStorage.getItem("data");
-}
-
+};
 
 const fetchURL = async () => {
-  options.body = JSON.stringify({ "long_url": `${inputField.value}` });
+  options.body = JSON.stringify({ long_url: `${inputField.value}` });
   const res = await fetch(apiURL, options);
   const data = await res.json();
   return data;
-}
+};
 
 linksContainer.addEventListener("click", (e) => {
-  if(e.target.classList.contains("copy")) {
+  if (e.target.classList.contains("copy")) {
     e.preventDefault(void 0);
     const linkElement = e.target.parentNode.querySelector(".link");
     const linkText = linkElement.textContent;
     navigator.clipboard.writeText(linkText);
   }
-})
-
-
+});
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const shortenedURL = await fetchURL();
-  console.log(shortenedURL);
   linksContainer.innerHTML += `
   <ul class="links-list">
   <li class="link-item bg-white rounded-xl p-4 flex items-center justify-between grid grid-cols-1 justify-items-center md:grid-cols-2">
@@ -63,7 +59,7 @@ form.addEventListener("submit", async (e) => {
 									</div>
 								</li>
                 </ul>
-  `
+  `;
   saveData();
 });
 
